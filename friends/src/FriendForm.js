@@ -4,28 +4,39 @@ class FriendForm extends React.Component {
   // method 1: put state in class component but outside render
   state = {
     friend: {
-      name: '',
-      age: '',
-      email: ''
+      name: 'david',
+      age: '64',
+      email: 'd2rd@outlook.com'
     }
   }
   
   render() {  //'render' MUST be lower case to be recognized by React!!!!
     return (
       <form>
-      <label>Name</label>
-      <input type="text"/>
+        <label>Name</label>
+        <input type="text" 
+        value={this.state.name} 
+        onChange={this.handleInputChange}
+        />
 
-      <label>Age</label>
-     <input type="number"/>    {/* Making type a 'number' will not convert it from string coming back from the form*/}
+        <label>Age</label>
+      <input type="number"/>    {/* Making type a 'number' will not convert it from string coming back from the form*/}
 
-      <label>Email</label>
-      <input type="email"/>  {/* changing type to email gets help from browser */}
+        <label>Email</label>
+        <input type="email"/>  {/* changing type to email gets help from browser */}
 
-      <button type="submit">Save Friends</button>
-       {/* everything you grab from the server will be a string.  The server will typically handle the conversion of age to a number. */}
+        <button type="submit">Save Friends</button>
+        {/* everything you grab from the server will be a string.  The server will typically handle the conversion of age to a number. */}
       </form>
     );
+  }
+
+  //helpers
+
+  // handleInputChange will change state.  setState() causes App to re-render.
+  handleInputChange = (event) => { 
+    console.log(event.target.value)
+    this.setState({ name: event.target.value })
   }
 }
 export default FriendForm;
