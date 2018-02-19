@@ -10,7 +10,7 @@ class FriendForm extends React.Component {
     }
   }
   
-  Render() {
+  render() {  //'render' MUST be lower case to be recognized by React!!!!
     return (
       <form>
       <label>Name</label>
@@ -25,7 +25,7 @@ class FriendForm extends React.Component {
       <button type="submit">Save Friends</button>
        {/* everything you grab from the server will be a string.  The server will typically handle the conversion of age to a number. */}
       </form>
-    )
+    );
   }
 }
 export default FriendForm;
