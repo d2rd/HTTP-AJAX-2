@@ -2,13 +2,13 @@ import React from 'react';
 
 class FriendForm extends React.Component {
   // method 1: put state in class component but outside render
-  state = {
-    friend: {
-      name: 'david',
-      age: '64',
-      email: 'd2rd@outlook.com'
-    }
-  }
+  // state = {
+  //   friend: {
+  //     name: 'david',
+  //     age: '64',
+  //     email: 'd2rd@outlook.com'
+  //   }
+  // }
   
   render() {  //'render' MUST be lower case to be recognized by React!!!!
     return (
