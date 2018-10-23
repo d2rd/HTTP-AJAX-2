@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';  // axios library is in server node_modules folder
+import axios from '../node_modules/axios';  // axios library is in server node_modules folder
 
 class FriendList extends React.Component {
 
